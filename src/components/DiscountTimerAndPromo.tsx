@@ -3,7 +3,6 @@ import { View, Text, StyleSheet } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { DisplayPlan } from "../types/ProductTypes";
 
-// --- COLOR CONSTANTS (Used to define static style classes) ---
 const COLORS = {
     PRIMARY: "#39C662",
     TEXT: "#333333",

@@ -1,5 +1,3 @@
-// screens/LogoScreen.tsx
-
 import React, { useEffect } from "react";
 import { View, StyleSheet, ActivityIndicator, Image } from "react-native";
 
@@ -37,10 +35,9 @@ const styles = StyleSheet.create({
         alignItems: "center",
         backgroundColor: "#fff",
     },
-    // ⬅️ New style for the imported image
     logoImage: {
-        width: 150, // Adjust size as needed
-        height: 150, // Adjust size as needed
+        width: 150,
+        height: 150,
         marginBottom: 10,
     },
     logoText: {

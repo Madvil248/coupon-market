@@ -16,7 +16,6 @@ const AppHeader: React.FC<AppHeaderProps> = ({
     title,
     hideLogo = false,
 }) => {
-    // ⬅️ 2. Get the safe area insets
     const insets = useSafeAreaInsets();
 
     return (
@@ -34,7 +33,6 @@ const AppHeader: React.FC<AppHeaderProps> = ({
 
             {!hideLogo && (
                 <View style={styles.centerContainer}>
-                    {/* Display title or logo, prioritizing title if provided */}
                     {title ? (
                         <Text style={styles.logoText}>{title}</Text>
                     ) : (
@@ -47,7 +45,6 @@ const AppHeader: React.FC<AppHeaderProps> = ({
                 </View>
             )}
 
-            {/* Right container maintains horizontal balance */}
             <View style={styles.rightContainer} />
         </View>
     );

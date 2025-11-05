@@ -4,7 +4,9 @@ import {
     Text,
     TextInput,
     StyleSheet,
+    TargetedEvent,
     TextInputProps,
+    NativeSyntheticEvent,
 } from "react-native";
 
 interface ValidatedInputProps extends TextInputProps {
@@ -27,15 +29,16 @@ const ValidatedInput: React.FC<ValidatedInputProps> = ({
     const isValid = validate(value);
     const showError = hasInteracted && !isValid;
 
-    const handleBlur = () => {
+    const handleBlur = (e: NativeSyntheticEvent<TargetedEvent>) => {
         setIsFocused(false);
         setHasInteracted(true);
-        if (rest.onBlur) rest.onBlur();
+        if (rest.onBlur) rest.onBlur(e);
     };
 
-    const handleFocus = () => {
+    const handleFocus = (e: NativeSyntheticEvent<TargetedEvent>) => {
         setIsFocused(true);
-        if (rest.onFocus) rest.onFocus();
+        // Pass the event 'e' to the original handler
+        if (rest.onFocus) rest.onFocus(e);
     };
 
     return (

@@ -51,8 +51,6 @@ const CheckoutScreen: React.FC<CheckoutScreenProps> = ({ onSuccess }) => {
 
     const { selectedProductPlan } = useAppSelector((state) => state.products);
 
-    // Removed unused 'finalPrice' variable to clear the TypeScript warning.
-
     const [cardDetails, setCardDetails] = useState<StripeCardDetails | null>(
         null
     );
@@ -68,10 +66,8 @@ const CheckoutScreen: React.FC<CheckoutScreenProps> = ({ onSuccess }) => {
             ? `${data.durationWeeks} WEEK PLAN`
             : "Custom Plan";
 
-        // The final price (the amount the user pays) is the discounted price.
         const price = data ? data.discountedPrice : 0;
 
-        // Discount is calculated as the difference between the full price and the final price.
         const discountAmount = fullPrice - price;
         const isDiscounted = discountAmount > 0;
         const discountPercentage =
@@ -273,7 +269,8 @@ const CheckoutScreen: React.FC<CheckoutScreenProps> = ({ onSuccess }) => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: "#FFFFFF",
+        marginTop: 20,
+        marginHorizontal: 20,
     },
     keyboardAvoiding: {
         flex: 1,

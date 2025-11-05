@@ -33,7 +33,7 @@ const BottomButton: React.FC<BottomButtonProps> = ({
     const buttonStyle = [
         styles.buttonBase,
         disabled ? styles.buttonDisabled : styles.buttonActive,
-        buttonColor ? { backgroundColor: buttonColor } : {},
+        buttonColor && !disabled ? { backgroundColor: buttonColor } : {},
     ];
 
     const renderIcon = () => (
