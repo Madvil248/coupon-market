@@ -20,9 +20,12 @@ Clone the repository and install the dependencies:
 
 ```bash
 # Clone the repository (if you haven't)
-git clone <your-repo-url>
-cd <project-directory>
+git clone https://github.com/Madvil248/coupon-market.git
+cd coupon-market
 
 # Install dependencies
 npm install
+
+# Start Expo
+npx expo start
 ```
