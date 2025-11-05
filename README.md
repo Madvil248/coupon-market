@@ -29,3 +29,14 @@ npm install
 # Start Expo
 npx expo start
 ```
+
+### 2. Run the App
+
+Start the Expo development server:
+
+```bash
+# Start Expo
+npx expo start
+```
+
+Use the Expo Go app on your device to scan the QR code displayed in the browser window to run the application on your physical device.
